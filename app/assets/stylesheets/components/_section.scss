@@ -1,0 +1,86 @@
+
+.location-section {
+	display: flex;
+	justify-content: center;
+
+	&__wrapper {
+		display: inline-block;
+		margin-top: 25px;
+	}
+
+	img {
+		border-radius: 0.3rem;
+	}
+
+	h2 {
+		text-align: center;
+    	margin: 30px;
+    	font-weight: 100;
+    	font-size: 2rem;
+	}
+}
+
+
+.booking-section {
+	
+	width: 69.375rem;
+    margin: auto;
+
+	h2 {
+		text-align: center;
+    	margin: 30px;
+    	font-weight: 100;
+    	font-size: 2rem;
+	}
+
+	&__wrapper {
+		display: flex;
+    	justify-content: space-around;
+	}
+
+	&__process {
+		text-align: center;
+		display: flex;
+    	flex-direction: column;
+    	align-items: center;
+
+    	.activity-card {
+    		display: flex;
+    		height: 15rem;
+    		box-shadow: $default-shadow;
+    		border-radius: $default-radius;
+
+    		img { 
+    			border-radius: 5px 0px 0px 5px;
+    		}
+
+    		&__description {
+    			display: flex;
+    			flex-direction: column;
+    			align-items: center;
+    		}
+    	}
+	}
+
+	&__cart {
+		box-shadow: $default-shadow;
+    	border-radius: $default-radius;
+    	text-align: center;
+    	padding-bottom: 0.65rem;
+    	height: 100%;
+
+    	p {
+    		margin: 0.65rem 0rem;
+    	}
+	}
+
+	h3 {
+    	margin: 0.65rem 0rem;
+	}
+
+	button {
+		margin: 0.4rem 0rem;
+	}
+
+
+}
