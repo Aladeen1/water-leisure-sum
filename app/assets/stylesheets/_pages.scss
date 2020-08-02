@@ -5,10 +5,36 @@
 	    rgba(40, 45, 47, 0.35) 0%,
 	    rgba(67, 67, 81, 0.12) 31.25%,
 	    rgba(255, 255, 255, 0) 100%),
-    url(background.jpg);
+    url(temporary-background.jpg);
     background-size: cover;
-    background-position: top;
+    background-position: center;
     position: relative;
+
+    &__text-box {
+    	position: absolute;
+    	top: 40%;
+    	left: 10%;
+    	text-align: left;
+    	color: white;
+
+    	p {
+    		font-size: 1.3rem;
+    		font-weight: lighter;
+    	}
+
+    	h1 {
+    		font-weight: 400;
+    		letter-spacing: 3%;
+    		letter-spacing: 1px;
+    		font-size: 3rem;
+    	}
+
+    	button {
+    		margin-top: 15px;
+    	}
+    }
 }
+
+
 
 

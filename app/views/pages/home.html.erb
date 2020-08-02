@@ -1,11 +1,46 @@
 <header class="header">
-        <div class="header__text-box">
+    <div class="header__text-box">
         <h1 class="heading-primary">Get on and ride!</h1>
-            
-
-        <button class="btn btn--white btn--animated">Book now</button>
+        <p>Ride with us! Enjoy a ride in Speedboat, Hurricane, Banana, Jetski.</br> Starting at 40$ a ticket.</p>
+        <button class="btn btn--white">Book now</button>
     </div>
 </header>
+
+<main>
+	<section class="location-section">
+		<div class="location-section__wrapper">
+			<h2>The best water activities 1h from Seoul</h2>
+			<%= image_tag "sum-location.png" %>
+		</div>
+	</section>
+	<section class="booking-section">	
+			<h2>Do not hesitate and book with us</h2>
+			<div class="booking-section__wrapper">
+				<div class="booking-section__process">
+					<h3>Chose a date for your ride</h3>
+					<input id="calendar-target">
+					<h3>Select the activity you want to attend</h3>
+					<div class="activity-card">
+						<%= image_tag "Speedboat1.jpg" %>
+						<div class="activity-card__description">
+							<h3>Speedboat</h3>
+							<p>Get a 15 minutes speed boat ride and feel the excitement.</p>
+							<p>30$/ticket</p>
+							<%= render 'components/button-adding' %>
+
+						</div>
+					</div>
+				</div>
+				<div class="booking-section__cart">
+					<h3>Your order</h3>
+					<div class="breaking-line"></div>
+					<p id="date-output-target">Ticket for ..</p>
+					<p>0$</p>
+					<button class="btn btn--white">Proceed to payment</button>
+				</div>
+			</div>
+	</section>
+</main>
 
 <%= link_to "Proceed to payment", payment_path %>
 
@@ -14,3 +49,4 @@
     rgba($color-primary-light, 0.8),
     rgba($color-primary-dark, 0.8)),
 url(background.jpg); -->
+
