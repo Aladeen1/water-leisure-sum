@@ -20,22 +20,16 @@
 					<h3>Chose a date for your ride</h3>
 					<input id="calendar-target">
 					<h3>Select the activity you want to attend</h3>
-					<div class="activity-card">
-						<%= image_tag "Speedboat1.jpg" %>
-						<div class="activity-card__description">
-							<h3>Speedboat</h3>
-							<p>Get a 15 minutes speed boat ride and feel the excitement.</p>
-							<p>30$/ticket</p>
-							<%= render 'components/button-adding' %>
-
-						</div>
-					</div>
+					<%= render 'components/activity-card' %>
+					<%= render 'components/activity-card' %>
+					<%= render 'components/activity-card' %>
+					<%= render 'components/activity-card' %>
 				</div>
 				<div class="booking-section__cart">
 					<h3>Your order</h3>
 					<div class="breaking-line"></div>
 					<p id="date-output-target">Ticket for ..</p>
-					<p>0$</p>
+					<p class="price-font" id="cart-price">0$</p>
 					<button class="btn btn--white">Proceed to payment</button>
 				</div>
 			</div>

@@ -8,7 +8,8 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 
 @import "base/variables";
 @import "base/base";
-@import "pages";
+@import "pages/home";
 @import "components/button";
 @import "components/section";
 @import "components/button-adding";
+@import "components/activity-card";
