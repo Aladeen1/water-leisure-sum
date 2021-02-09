@@ -1,0 +1,18 @@
+<% total = @booking.speedboat + @booking.hurricane + @booking.banana + @booking.jetski %>
+
+<main class="booking-section">
+	<div class="booking-section__confirmation">
+	<div class="title-box">
+		<h3>예약확인</h3>
+		<div class="breaking-line"></div>
+	</div>
+	<p class="date-confirmation">예약날짜 <%= @booking.date %></p>
+	<p><span class="set-big-width">Jetski ticket</span><span class="set-small-width"> x<%= @booking.jetski %></span><span class="set-small-width-0">₩<%= @booking.jetski * 30000 %></span></p>
+	<p><span class="set-big-width">Speedboat ticket</span><span class="set-small-width"> x<%= @booking.speedboat %></span><span class="set-small-width-0">₩<%= @booking.speedboat * 30000 %></span></p>
+	<p><span class="set-big-width">Hurricane ticket</span><span class="set-small-width">x<%= @booking.hurricane %></span><span class="set-small-width-0">₩<%= @booking.hurricane * 30000 %></span></p>
+	<p><span class="set-big-width">Banana ticket</span><span class="set-small-width"> x<%= @booking.banana %></span><span class="set-small-width-0">₩<%= @booking.banana * 30000 %></span></p>
+	<p class="total-confirmation"><span class="set-big-width">Total tickets</span><span class="set-small-width"> x<%= total %></span><span class="set-small-width-0">₩<%= total * 30000 %></span></p>
+	</div>
+</main>
+
+
