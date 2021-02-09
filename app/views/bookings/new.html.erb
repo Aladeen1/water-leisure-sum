@@ -1,0 +1,100 @@
+<header class="header">
+    <div class="header__text-box">
+        <h1 class="heading-primary">올 여름 무더위를 싹 날리러 을왕리로 썸타러 가자!</h1>
+        <p>스피드보드, 허리케인, 바나나보트, 제트스키를 </br> 수상레저 썸에서 30,000원에 즐겨보세요!</p>
+        <button class="btn btn--white" id="anchor-departure">바로 예약</button>
+    </div>
+</header>
+
+<main>
+	<section class="location-section">
+		<div class="location-section__wrapper">
+			<h2>서울에서 1시간 거리에서 수상레저를 즐겨보세요!</h2>
+			<%= image_tag "sum-location.png" %>
+		</div>
+	</section>
+	<section class="booking-section">	
+			<h2 id="anchor-landing">예약 하는 걸 잊지마세요!</h2>
+			<div class="booking-section__wrapper">
+				<div class="booking-section__process">
+					<h3 class="subtitle">날짜를 선택해 주세요.</h3>
+					<input id="calendar-target">
+					<h3 class="subtitle activity-subtitle">원하는 레져스포츠를 선택해주세요!</h3>
+					<div class="activity-card first-activity-card">
+						<%= image_tag "Speedboat1.jpg" %>
+						<div class="activity-card__description">
+							<div class="title-box">
+								<h3>스피드 보트</h3>
+								<div class="breaking-line"></div>
+							</div>
+							<p>80km로 달리는 보트로 을왕리 앞바다를 짜릿하게 가로지르며 시원한 바람을 온 몸으로 느껴보세요. 사랑하는 사람들이나 가족과 함께하기 제격인 스피드보트!</p>
+							<p class="price-font">₩30,000/인당</p>
+						</div>
+					</div>
+					<div class="activity-card">
+						<%= image_tag "Speedboat1.jpg" %>
+						<div class="activity-card__description">
+							<div class="title-box">
+								<h3>허리케인</h3>
+								<div class="breaking-line"></div>
+							</div>
+							<p>요즘 가장 핫 한 놀이기구 허리케인은 모터보트가 끌어주는 힘으로 물위를 활주하며 원심력을 이용한 360도 회전하는 놀이기구입니다.</p>
+							<p class="price-font">₩30,000/인당</p>
+						</div>
+					</div>
+					<div class="activity-card">
+						<%= image_tag "Speedboat1.jpg" %>
+						<div class="activity-card__description">
+							<div class="title-box">
+								<h3>바나나 보트</h3>
+								<div class="breaking-line"></div>
+							</div>
+							<p>모터보트가 끌어주는 힘으로 물위를 활주하고, 몸으로 중심을 잡아보세요. 속력이 붙을 수록 물 위를 날아오르는 듯한 기분을 느낄거예요.</p>
+							<p class="price-font">₩30,000/인당</p>
+						</div>
+					</div>
+					<div class="activity-card">
+						<%= image_tag "Speedboat1.jpg" %>
+						<div class="activity-card__description">
+							<div class="title-box">
+								<h3>제트보트</h3>
+								<div class="breaking-line"></div>
+							</div>
+							<p>유람과 스릴을 한 번에 느껴보세요! 지상에는 롤러코스터가 있다면 물위에는 제트보트가 있다! 더위도 잊게만드는 제트보트!</p>
+							<p class="price-font">₩30,000/인당</p>
+						</div>
+					</div>
+				</div>
+				<div class="booking-section__cart">
+					<div class="title-box">
+						<h3>예약확인</h3>
+						<div class="breaking-line"></div>
+					</div>
+					<div class="cart-text-box">
+						<p id="date-output-target"></p>
+						<p class="price-font" id="cart-price">₩0</p>
+					</div>
+					<%= form_for(@booking) do |f| %>
+					<%=f.hidden_field :date , id:"date-input"%>
+					<%=f.hidden_field :speedboat , id:"speedboat-input"%>
+					<%=f.hidden_field :jetski , id:"jetski-input"%>
+					<%=f.hidden_field :hurricane , id:"hurricane-input"%>
+					<%=f.hidden_field :banana , id:"banana-input"%>
+					<%= f.submit "바로 예약", class:"btn btn--white" %>
+					<% end %>
+				</div>
+			</div>
+	</section>
+</main>
+<%= javascript_pack_tag 'button-adding' %>
+<%= javascript_pack_tag 'calendar' %>
+<%= javascript_pack_tag 'smooth-anchor' %>
+
+
+
+<!-- background-image: linear-gradient(
+    to right bottom,
+    rgba($color-primary-light, 0.8),
+    rgba($color-primary-dark, 0.8)),
+url(background.jpg); -->
+

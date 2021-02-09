@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: MyString
+  speedboat: 1
+  jetski: 1
+  hurricane: 1
+  banana: 1
+  phone: MyString
+  status: MyString
+
+two:
+  date: MyString
+  speedboat: 1
+  jetski: 1
+  hurricane: 1
+  banana: 1
+  phone: MyString
+  status: MyString

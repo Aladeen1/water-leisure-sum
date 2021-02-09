@@ -7,23 +7,23 @@ function shop(minusTarget, plusTarget, target) {
 
 function increaseValue(target) {
   let value = parseInt(target.innerText);
-  let totalValue = parseInt(cartPrice.innerText.split('$')[0]);
+  let totalValue = parseInt(cartPrice.innerText.split('₩')[1].split(',')[0]);
   target.innerText = `${value + 1}`;
-  cartPrice.innerText = `${totalValue + 30}$`
+  cartPrice.innerText = `₩${totalValue + 30},000`
 }
 
 function decreaseValue(target) {
   let value = parseInt(target.innerText);
-  let totalValue = parseInt(cartPrice.innerText.split('$')[0]);
+  let totalValue = parseInt(cartPrice.innerText.split('₩')[1].split(',')[0]);
   if (value > 0) {
     target.innerText = `${value - 1}`;
-    cartPrice.innerText = `${totalValue - 30}$`
+    cartPrice.innerText = `₩${totalValue - 30},000`
   }
 }
 
 function createShoppingButtons() {
   const ancres = document.querySelectorAll('.activity-card__description');
-  let minusTarget, plusTarget, target
+  let minusTarget, plusTarget, target;
 
   ancres.forEach((ancre, index) => {
 
@@ -45,11 +45,25 @@ function createShoppingButtons() {
   })
 }
 
-
-
 createShoppingButtons();
 
 
+document.querySelector('input[type="submit"]').addEventListener('click', (event) => {
+  event.preventDefault();
+  fillInputs()
+  document.forms[0].submit();
+})
+
+
+
+function fillInputs() {
+  const ids = ["speedboat-input", "jetski-input", "hurricane-input", "banana-input"];
+  const tickets = document.querySelectorAll(".ticket-number");
+
+  tickets.forEach((ticket, index) => {
+    document.getElementById(`${ids[index]}`).value = parseInt(ticket.innerText);
+  })
+}
 
 
 

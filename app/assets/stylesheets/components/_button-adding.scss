@@ -1,5 +1,5 @@
 .shopping-button {
-	width: 10rem;
+	width: 9rem;
 	display: flex;
 	justify-content: space-around;
 	background-color: $color-deep-blue;
@@ -20,5 +20,11 @@
 	    color: #C4C4C4;
 	    width: 35px;
 	    cursor: pointer;
+
+	    p {
+	    	-webkit-user-select: none;  /* Chrome all / Safari all */
+  			-moz-user-select: none;     /* Firefox all */
+ 			-ms-user-select: none; 
+	    }
 	}
 }
