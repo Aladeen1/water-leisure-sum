@@ -6,7 +6,7 @@ require("flatpickr/dist/flatpickr.css");
 console.log(document.getElementById('calendar-target'))
 let userdate = document.getElementById('calendar-target').flatpickr({
 	locale: Korean,
-	inline: true,
+	inline: true, 
 	altInput: true,
 	altFormat: 'd/m/Y',
 	dateFormat: 'Y/m/d',
