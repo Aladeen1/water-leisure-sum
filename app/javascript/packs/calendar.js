@@ -1,7 +1,7 @@
 import "@fortawesome/fontawesome-free/js/all";
 import flatpickr from "flatpickr";
 import { Korean } from "flatpickr/dist/l10n/ko.js";
-require("flatpickr/dist/flatpickr.css");
+import "flatpickr/dist/flatpickr.css";
 
 console.log(document.getElementById('calendar-target'))
 let userdate = document.getElementById('calendar-target').flatpickr({
